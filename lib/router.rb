@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 
-require 'controller'
+require_relative 'controller'
 
 class Router
 
@@ -19,6 +19,7 @@ class Router
       case choice
       when 1
         puts "create a gossip"
+        @controller.create_gossip
       when 4
         puts "leave the app"
         break
