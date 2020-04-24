@@ -14,12 +14,16 @@ class Router
     while true
       puts "Dis-moi jeune comère, que veux tu faire ?"
       puts "1 - Créer un gossip"
+      puts "2 - Afficher tous les potins"
       puts "4 - Quitter l'application"
-      choice = gets.chomp.to_i
-      case choice
+      params = gets.chomp.to_i
+      case params
       when 1
         puts "create a gossip"
         @controller.create_gossip
+      when 2
+        puts "Voici les ragots du moment"
+        @controller.index_gossips
       when 4
         puts "leave the app"
         break
